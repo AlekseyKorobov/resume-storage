@@ -5,9 +5,12 @@ public class ArrayStorage {
     Resume[] storage = new Resume[10000];
 
     void clear() {
+
     }
 
     void save(Resume r) {
+        Integer intUuid = Integer.parseInt(r.uuid);
+        storage [intUuid] = r ;
     }
 
     Resume get(String uuid) {
@@ -15,6 +18,8 @@ public class ArrayStorage {
     }
 
     void delete(String uuid) {
+        Integer intUuid = Integer.parseInt(uuid);
+        storage [intUuid] = null ;
     }
 
     /**

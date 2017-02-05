@@ -13,6 +13,10 @@ public class ArrayStorage {
     void save(Resume r) {
 
         boolean notFindEquil = true ;
+        if (countResume=storage.length){//проверка на переполнение
+            System.out.println("Нет места.необходимо удалить минимум одно резюме");
+            return;
+        }
         for (int i = 0; i <storage.length-1 ; i++) {
             if (storage[i].uuid==r.uuid){ //проверка на уникальность
                 notFindEquil = false ;
